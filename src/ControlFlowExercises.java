@@ -70,7 +70,7 @@ public class ControlFlowExercises {
         Scanner userInput = new Scanner(System.in);
         System.out.println("The following table will display the squared and cubed values up to a given integer.");
         System.out.println("Enter an integer: ");
-        int chosenNumber = Integer.parseInt(userInput.next());
+        int chosenNumber = userInput.nextInt();
         Formatter f = new Formatter();
         f.format("%-6s %1s %-7s %1s %-6s\n", "Number", "|", "Squared", "|", "Cubed");
         f.format("%-6s %1s %-7s %1s %-6s\n", "------", "|", "-------", "|", "-----");
@@ -85,7 +85,7 @@ public class ControlFlowExercises {
         String anotherScore = " ";
         do{
            System.out.println("Please enter a numerical grade (0-100): ");
-           gradeNum = Integer.parseInt(userInput.next());
+           gradeNum = userInput.nextInt();
            if(gradeNum >=88){
                letterGrade = 'A';
            }else if(gradeNum <= 87 & gradeNum >=80){
