@@ -31,7 +31,7 @@ public class ControlFlowExercises {
         }while (m < 1000000);
 
 //  For Loops
-        for (int x = 5; x <= 15; x++){
+        for(int x = 5; x <= 15; x++){
             System.out.print(x + " ");
         }
 
