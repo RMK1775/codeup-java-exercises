@@ -72,10 +72,10 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         int checkInt = scanner.nextInt();
 
-        if(checkInt < 1 || checkInt > 10){
+        if(checkInt < min || checkInt > max){
             System.out.println("You have not entered an acceptable value.");
-            System.out.print("Please enter a whole number between 1 and 10: ");
-            return getInteger(1,10);
+            System.out.print("Please enter a whole number between " + min + " and " + max + ": ");
+            return getInteger(min,max);
         }else {
             return checkInt;
         }
@@ -101,7 +101,7 @@ public class MethodsExercises {
         System.out.print("Would you like to enter another number? (y or n) ");
         Scanner another = new Scanner(System.in);
         anotherFactorial = another.nextLine();
-        if(anotherFactorial.toLowerCase().equals("y")){
+        if(anotherFactorial.equalsIgnoreCase("y")){
             factorizeIt();
         }
     }
@@ -123,6 +123,9 @@ public class MethodsExercises {
         pressAnyKeyToContinue();
         int[] diceRoll = rollTheDice(dieSides);
         System.out.printf("You have rolled %d and %d!", diceRoll[0], diceRoll[1]);
+        System.out.println("Roll another pair of dice? (y/n) ");
+        String rollAgain = gygax.nextLine();
+        if(rollAgain.equalsIgnoreCase("y")){pairOfDice();}
     }
 
     public static int[] rollTheDice(int sides){
