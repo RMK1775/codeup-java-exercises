@@ -15,7 +15,7 @@ public class Input {
 
     public boolean yesNo() {
         System.out.println("Yes or No?");
-        String input = getString().toLowerCase();
+        String input = getString().trim().toLowerCase();
         char checkValue = input.charAt(0);
         return checkValue == 'y';
     }
@@ -26,7 +26,7 @@ public class Input {
         boolean outOfBounds = false;
         do {
             exceptionFound = false;
-            System.out.println("Enter a number between " + min + " and " + max + ".");
+            System.out.println("Enter a number between " + min + " and " + max + ": ");
             input = this.scanner.nextInt();
             try {
                 if (input < min || input > max) {
@@ -40,7 +40,6 @@ public class Input {
                 System.out.println("That is not an integer");
                 System.out.println();
                 exceptionFound = true;
-
             }
 
         } while (exceptionFound || outOfBounds);
