@@ -52,6 +52,11 @@ public class Input {
         return this.scanner.nextInt();
     }
 
+    public int getInt(String prompt){
+        System.out.print(prompt);
+        return this.scanner.nextInt();
+    }
+
     public double getDouble(double min, double max) {
         double input = 0.0;
         boolean outOfBounds = false;

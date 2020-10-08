@@ -37,7 +37,7 @@ public class Person {
         System.out.println(person1 == person2);
         */
 
-
+        /*
         Person person1 = new Person("John");
         Person person2 = person1;
         System.out.println(person1.getName());
@@ -46,6 +46,6 @@ public class Person {
         person2.setName("Jane");
         System.out.println(person1.getName());
         System.out.println(person2.getName());
-
+        */
     }
 }
