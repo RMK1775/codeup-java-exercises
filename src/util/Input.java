@@ -14,7 +14,7 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("Yes or No?");
+        System.out.print("(Y)es or (N)o?");
         String input = getString().trim().toLowerCase();
         char checkValue = input.charAt(0);
         return checkValue == 'y';
