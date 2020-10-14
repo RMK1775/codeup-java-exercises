@@ -28,7 +28,7 @@ public class GradesApplication {
         students.put("nomercy", tommy);
 
         initialGreeting(students);
-
+        solicitRecordChoice(students);
     }
 
     public static void assignGrades(Student name){
@@ -42,18 +42,30 @@ public class GradesApplication {
 
     public static void initialGreeting(HashMap<String, Student> data) {
         System.out.println("Greetings!");
-        System.out.println("These are the usernames of our current students.");
+        System.out.println("These are the usernames of our current students.\n");
         for (String i : data.keySet()) {
             System.out.printf(" |>%s<| ", i);
         }
+        System.out.println("\n");
+    }
+
+    public static void showChosenRecord(Student aStudent){
+        System.out.printf("Student name: %s\n", aStudent.getName());
+        System.out.println("GPA: " + aStudent.getGradeAverage());
     }
 
     public static void solicitRecordChoice(HashMap<String, Student> data){
-        System.out.print("\nWhich student's info would you like to see? ");
         Input choice = new Input();
-        String userName = choice.getString();
-        if(data.containsKey(userName)){
-            System.out.println(userName[0]);
-        }
+        do {
+            System.out.print("Which student's info would you like to see? ");
+            String userName = choice.getString();
+            if (data.containsKey(userName)) {
+                showChosenRecord(data.get(userName));
+                System.out.printf("GitHub user name: %s\n\n", userName);
+            } else {
+                System.out.println("That record does not exist\n");
+            }
+            System.out.println("Would you like to see another student record?");
+        }while(choice.yesNo());
     }
 }

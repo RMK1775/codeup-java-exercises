@@ -1,14 +1,17 @@
+package groceries;
+
+import groceries.GroceryItem;
 import util.Input;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GroceryList {
-    public ArrayList<GroceryItem> aisleItems = new ArrayList<>();
+   /* public ArrayList<GroceryItem> aisleItems = new ArrayList<>();
     public ArrayList<GroceryItem> bakedGoods = new ArrayList<>();
     public ArrayList<GroceryItem> dairyGoods = new ArrayList<>();
     public ArrayList<GroceryItem> fruitsAndVeggies = new ArrayList<>();
-    public ArrayList<GroceryItem> animalProteins = new ArrayList<>();
+    public ArrayList<GroceryItem> animalProteins = new ArrayList<>();*/
 
 
     /*
@@ -29,14 +32,22 @@ public class GroceryList {
         Input choice = new Input();
         System.out.println("Would you like to start a grocery list?");
         if(choice.yesNo()){
-            createBlankList();
-
+            createNewList();
         }
     }
 
-    public static HashMap createBlankList(){
-        HashMap<String, ArrayList> groceryList = new HashMap<>();
-        groceryList.put("Aisle", aisleItems)
+    public static HashMap createNewList(){
+        HashMap<String, GroceryCategory> groceryList = new HashMap<>();
+        populateList();
+        return groceryList;
     }
 
+    public static void populateList(){
+        Input response = new Input();
+        System.out.println("Would you like to add to your list?");
+        do{
+            
+        }
+
+    }
 }
