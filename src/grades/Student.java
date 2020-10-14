@@ -8,7 +8,6 @@ public class Student {
 
     public Student(String aName){
         this.name = aName;
-        this.grades = grades;
     }
 
     public String getName(){

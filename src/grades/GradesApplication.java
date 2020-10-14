@@ -24,7 +24,7 @@ public class GradesApplication {
         //Add Students and their usernames to Hashmap students
         students.put("cobrakai818", johnny);
         students.put("badboymagnet", alison);
-        students.put("MiyagiDo862", daniel);
+        students.put("miyagido862", daniel);
         students.put("nomercy", tommy);
 
         initialGreeting(students);
@@ -44,13 +44,16 @@ public class GradesApplication {
         System.out.println("Greetings!");
         System.out.println("These are the usernames of our current students.");
         for (String i : data.keySet()) {
-            System.out.printf("|  %s  |", i);
+            System.out.printf(" |>%s<| ", i);
         }
     }
 
-    public static void displayInfo(){
+    public static void solicitRecordChoice(HashMap<String, Student> data){
         System.out.print("\nWhich student's info would you like to see? ");
         Input choice = new Input();
-        choice.getString();
+        String userName = choice.getString();
+        if(data.containsKey(userName)){
+            System.out.println(userName[0]);
+        }
     }
 }
