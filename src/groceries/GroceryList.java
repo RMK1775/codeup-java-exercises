@@ -46,7 +46,7 @@ public class GroceryList {
         Input response = new Input();
         System.out.println("Would you like to add to your list?");
         do{
-            
+
         }
 
     }
